@@ -1,11 +1,11 @@
 public class MonsterChar {
-
+//set variables
 	private String type;
 	private int hp;
 	private int str;
 	private int con;
 	private int dex;
-
+//builder
 	public MonsterChar(String type, int hp, int str, int con, int dex) {
 		this.type = type;
 		this.hp = hp;
@@ -13,7 +13,7 @@ public class MonsterChar {
 		this.con = con;
 		this.dex = dex;
 	}
-
+//getters
 	public String getMonType() {
 		return this.type;
 	}
@@ -34,6 +34,7 @@ public class MonsterChar {
 		return this.dex;
 	}
 
+//setters
 	public void setMonType(String type) {
 		this.type = type;
 	}

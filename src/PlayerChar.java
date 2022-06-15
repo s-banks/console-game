@@ -1,21 +1,27 @@
 public class PlayerChar {
-
+//set variables
 	private String name;
+	private int maxHp;
 	private int hp;
 	private int str;
 	private int con;
 	private int dex;
-
-	public PlayerChar(String name, int hp, int str, int con, int dex) {
+//builder
+	public PlayerChar(String name, int maxHp, int hp, int str, int con, int dex) {
 		this.name = name;
+		this.maxHp = maxHp;
 		this.hp = hp;
 		this.str = str;
 		this.con = con;
 		this.dex = dex;
 	}
-
+//getters
 	public String getName() {
 		return this.name;
+	}
+
+	public int getMaxHp() {
+		return this.maxHp;
 	}
 
 	public int getHp() {
@@ -34,8 +40,13 @@ public class PlayerChar {
 		return this.dex;
 	}
 
+//setters
 	public void setName(String name) {
 		this.name = name;
+	}
+
+	public void setMaxHp(int maxHp) {
+		this.hp = maxHp;
 	}
 
 	public void setHp(int hp) {
