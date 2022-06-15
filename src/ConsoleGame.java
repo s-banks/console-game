@@ -31,6 +31,9 @@ public class ConsoleGame {
 		Items weakHealthPot = new Items("Weak Health Potion", 2, 0, 0, 0);
 		Items healthPot = new Items("Health Potion", 4, 0, 0, 0);
 		Items QualHealthPot = new Items("Quality Health Potion", 2, 0, 0, 0);
+		Items WeakStrPot = new Items("Weak Health Potion", 0, 1, 0, 0);
+		Items WeakConPot = new Items("Weak Health Potion", 0, 0, 1, 0);
+		Items WeakDexPot = new Items("Weak Health Potion", 0, 0, 0, 1);
 //Game intro text
 		System.out.println("Welcome to the World of Sutal, " + player.getName() + "!");
 		System.out.println("We have summoned you from your world to defeat the Demon Lord Varthos.");
