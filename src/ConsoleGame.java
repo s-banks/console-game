@@ -28,11 +28,15 @@ public class ConsoleGame {
 		MonsterChar bullywug3 = new MonsterChar("Bullywug", 5, 14, 19, 19);
 		MonsterChar bullywug4 = new MonsterChar("Bullywug", 5, 14, 19, 19);
 //Create items
+		//Health pots
 		Items weakHealthPot = new Items("Weak Health Potion", 2, 0, 0, 0);
 		Items healthPot = new Items("Health Potion", 4, 0, 0, 0);
-		Items QualHealthPot = new Items("Quality Health Potion", 2, 0, 0, 0);
+		Items QualHealthPot = new Items("Quality Health Potion", 6, 0, 0, 0);
+		//Strength pot
 		Items WeakStrPot = new Items("Weak Health Potion", 0, 1, 0, 0);
+		//Constitution pot
 		Items WeakConPot = new Items("Weak Health Potion", 0, 0, 1, 0);
+		//Dexterity pot
 		Items WeakDexPot = new Items("Weak Health Potion", 0, 0, 0, 1);
 //Game intro text
 		System.out.println("Welcome to the World of Sutal, " + player.getName() + "!");
@@ -41,56 +45,84 @@ public class ConsoleGame {
 		scanner.nextLine();
 		clrScrn();
 		System.out.println("We are giving you the magic sword Farenthal to aid you in your quest. In order to successfully defeat the Demon Lord, ");
-		System.out.println("you will need to venture out the gates of our fair city, Errdonia, and fight monsters to grow in strength and power.");
+		System.out.println("you will need to venture out the gates of our fair city, Caldonia, and fight monsters to grow in strength and power.");
 		System.out.println("Press enter to continue.....");
+		mvScrn();
 		scanner.nextLine();
 		clrScrn();
 		System.out.println("There is more for you to know, but hey, this is just a demo! Get out there and fight stuff!");
 		System.out.println("What do you wish to do? (L)eave town or (E)xit game?");
+		mvScrn();
 		String userChoice = scanner.next();
-		if(userChoice.equalsIgnoreCase("e")) {
+		if (userChoice.equalsIgnoreCase("e")) {
 			exitGame();
-		} else if(userChoice.equalsIgnoreCase("l")) {
-			System.out.println("Leaving town somehow!");
+		} else if (userChoice.equalsIgnoreCase("l")) {
+			leaveTown();
 		} else {
-			System.out.println("Damn, you broke something");
+			userIsDumb();
 		}
-
 
 
 	}
 
-//Random generator for dmg dealt. Random 1-3 dmg.
-		public static void dmgGen() {
-			// define the range
-			int max = 3;
-			int min = 1;
-			int range = max - min + 1;
-			// generate the random number
-				int rand = (int)(Math.random() * range) + min;
-				System.out.println(rand);
-			}
+	//Random generator for dmg dealt. Random 1-3 dmg.
+	public static void dmgGen() {
+		// define the range
+		int max = 3;
+		int min = 1;
+		int range = max - min + 1;
+		// generate the random number
+		int rand = (int) (Math.random() * range) + min;
+		System.out.println(rand);
+	}
 
-//method to scroll blank lines to clear off old text
-		public static void clrScrn() {
-			for (int i = 0; i < 50; ++i)
-				System.out.println();
-		}
+//method to scroll blank lines to clear off old text - 50 lines
+	public static void clrScrn() {
+		for (int i = 0; i < 50; ++i)
+			System.out.println();
+	}
 
-//method to manually exit program if user selects the option
-		public static void exitGame() {
-			System.out.println("Terminating game...cause you suck");
-			System.exit(0);
-		}
+//method to scroll blank lines to clear off old text - 7 lines
+	public static void mvScrn() {
+		for (int i = 0; i < 7; ++i)
+			System.out.println();
+	}
 
+//method to manually exit program if user selects the option to quit
+	public static void exitGame() {
+		System.out.println("Terminating game...");
+		System.exit(0);
+	}
 
+//
+	private static void leaveTown() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("You decide to leave the town and enter the grasslands outside the city");
+		//would prompt for another selection of choices here, but for now will force an encounter
+		System.out.println("Press enter to continue.....");
+		mvScrn();
+		smackStuff();
+	}
+
+//exit method for incorrect user selections
+	private static void userIsDumb() {
+		System.out.println("It seems simple instructions aren't your forte. Very well, exiting the game...");
+		System.exit(64);
+	}
+
+	private static void smackStuff() {
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("A nasty-smelling green creature carrying a club runs towards you.");
+		System.out.println("Seems it is time to fight...");
+		System.out.println("Press enter to continue.....");
+		mvScrn();
+		scanner.nextLine();
+	}
 
 
 
 
 }
-
-
 
 
 
