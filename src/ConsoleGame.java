@@ -11,6 +11,7 @@ public class ConsoleGame {
 		String playerName = String.valueOf(scanner.nextLine());
 //Create player character with pre-made stats
 		PlayerChar player = new PlayerChar(playerName, 9, 9, 16, 17, 18);
+//Will likely not use most monsters and items early on. Created for future inclusion
 //create monster characters.
 		//Goblins
 		MonsterChar Goblin1 = new MonsterChar("Goblin", 1, 7, 7, 8);
@@ -50,7 +51,7 @@ public class ConsoleGame {
 		mvScrn();
 		scanner.nextLine();
 		clrScrn();
-		System.out.println("There is more for you to know, but hey, this is just a demo! Get out there and fight stuff!");
+		System.out.println("There is more for you to know, but hey, this is just a demo! Now, get out there and fight stuff!");
 		System.out.println("What do you wish to do? (L)eave town or (E)xit game?");
 		mvScrn();
 		String userChoice = scanner.next();
@@ -104,7 +105,7 @@ public class ConsoleGame {
 		smackStuff();
 	}
 
-//exit method for incorrect user selections
+//exit method for incorrect user selections at prompts. Later will set up choices to loop back if incorrect option entered
 	private static void userIsDumb() {
 		System.out.println("It seems simple instructions aren't your forte. Very well, exiting the game...");
 		System.exit(64);

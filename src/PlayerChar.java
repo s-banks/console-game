@@ -1,4 +1,5 @@
 public class PlayerChar {
+
 //set variables
 	private String name;
 	private int maxHp;
@@ -6,6 +7,7 @@ public class PlayerChar {
 	private int str;
 	private int con;
 	private int dex;
+
 //builder
 	public PlayerChar(String name, int maxHp, int hp, int str, int con, int dex) {
 		this.name = name;
@@ -15,6 +17,7 @@ public class PlayerChar {
 		this.con = con;
 		this.dex = dex;
 	}
+
 //getters
 	public String getName() {
 		return this.name;
@@ -64,6 +67,5 @@ public class PlayerChar {
 	public void setDex(int dex) {
 		this.dex = dex;
 	}
-
 
 }

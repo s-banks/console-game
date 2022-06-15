@@ -1,11 +1,13 @@
 public class Items {
-	//set variables
+
+//set variables
 	private String itemName;
 	private int plusHp;
 	private int plusStr;
 	private int plusCon;
 	private int plusDex;
-	//builder
+
+//builder
 	public Items(String itemName, int plusHp, int plusStr, int plusCon, int plusDex) {
 		this.itemName = itemName;
 		this.plusHp = plusHp;
@@ -13,7 +15,8 @@ public class Items {
 		this.plusCon = plusCon;
 		this.plusDex = plusDex;
 	}
-	//getters
+
+//getters
 	public String getItemName() {
 		return this.itemName;
 	}
@@ -34,7 +37,7 @@ public class Items {
 		return this.plusDex;
 	}
 
-	//setters
+//setters
 	public void setItemName(String itemName) {
 		this.itemName = itemName;
 	}
@@ -54,6 +57,5 @@ public class Items {
 	public void setPlusDex(int plusDex) {
 		this.plusDex = plusDex;
 	}
-
 
 }
