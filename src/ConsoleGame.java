@@ -88,7 +88,7 @@ public class ConsoleGame {
 		System.exit(0);
 	}
 
-//
+//Method to initiate the out-of-town experience
 	private static void leaveTown() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("You decide to leave the town and enter the grasslands outside the city");
@@ -104,6 +104,7 @@ public class ConsoleGame {
 		System.exit(64);
 	}
 
+//Method to run fights
 	private static void smackStuff() {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println("A nasty-smelling green creature carrying a club runs towards you.");
@@ -111,6 +112,8 @@ public class ConsoleGame {
 		System.out.println("Press enter to continue.....");
 		mvScrn();
 		scanner.nextLine();
+		System.out.println("The creature reaches you and you swing the mighty Farenthal...");
+
 	}
 
 
