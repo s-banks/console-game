@@ -68,4 +68,15 @@ public class PlayerChar {
 		this.dex = dex;
 	}
 
+	//Setup player damage rolls
+	public static void playerDmgGen() {
+		// define the range
+		int max = 4;
+		int min = 1;
+		int range = max - min + 1;
+		// generate the random number
+		int rand = (int) (Math.random() * range) + min;
+		System.out.println(rand);
+	}
+
 }

@@ -62,20 +62,13 @@ public class ConsoleGame {
 		} else {
 			userIsDumb();
 		}
+//PlayerChar.playerDmgGen();
+//MonsterChar.monsterDmgGen();
 
 
-	}
+	} //end of main brace
 
-	//Random generator for dmg dealt. Random 1-3 dmg.
-	public static void dmgGen() {
-		// define the range
-		int max = 3;
-		int min = 1;
-		int range = max - min + 1;
-		// generate the random number
-		int rand = (int) (Math.random() * range) + min;
-		System.out.println(rand);
-	}
+
 
 //method to scroll blank lines to clear off old text - 50 lines
 	public static void clrScrn() {
@@ -123,7 +116,7 @@ public class ConsoleGame {
 
 
 
-}
+} //end of class brace
 
 
 
