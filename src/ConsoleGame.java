@@ -53,6 +53,7 @@ public class ConsoleGame {
 		scanner.nextLine();
 		clrScrn();
 		System.out.println("There is more for you to know, but hey, this is just a demo! Now, get out there and fight stuff!");
+//End of story intro. Here we begin choices for the user to direct the game play.
 		System.out.println("What do you wish to do? (L)eave town or (E)xit game?");
 		mvScrn();
 		String userChoice = scanner.next();
