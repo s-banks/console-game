@@ -9,10 +9,10 @@ public class ConsoleGame {
 //Have user set their name
 		System.out.println("What is your name, hero?");
 		String playerName = String.valueOf(scanner.nextLine());
-//Create player character with pre-made stats
+//Create player character with pre-made stats (name, maxhp, hp (current), strength, constitution, & dexterity)
 		PlayerChar player = new PlayerChar(playerName, 9, 9, 16, 17, 18);
 //Will likely not use most monsters and items early on. Created for future inclusion
-//create monster characters.
+//create monster characters. (name, hp, strength, constitution, dexterity)
 		//Goblins
 		MonsterChar Goblin1 = new MonsterChar("Goblin", 1, 7, 7, 8);
 		MonsterChar Goblin2 = new MonsterChar("Goblin", 1, 7, 7, 8);
@@ -28,7 +28,7 @@ public class ConsoleGame {
 		MonsterChar bullywug2 = new MonsterChar("Bullywug", 5, 14, 19, 19);
 		MonsterChar bullywug3 = new MonsterChar("Bullywug", 5, 14, 19, 19);
 		MonsterChar bullywug4 = new MonsterChar("Bullywug", 5, 14, 19, 19);
-//Create items
+//Create items (item name, plus to health, plus to strength, plus to constitution, plus to dexterity)
 		//Health pots
 		Items weakHealthPot = new Items("Weak Health Potion", 2, 0, 0, 0);
 		Items healthPot = new Items("Health Potion", 4, 0, 0, 0);
