@@ -10,6 +10,7 @@ public class ConsoleGame {
 		System.out.println("What is your name, hero?");
 		String playerName = String.valueOf(scanner.nextLine());
 //Create player character with pre-made stats (name, maxhp, hp (current), strength, constitution, & dexterity)
+//Can be refactored to allow for roll based stats at a later time
 		PlayerChar player = new PlayerChar(playerName, 9, 9, 16, 17, 18);
 //Will likely not use most monsters and items early on. Created for future inclusion
 //create monster characters. (name, hp, strength, constitution, dexterity)
