@@ -97,7 +97,8 @@ public class ConsoleGame {
 		//would prompt for another selection of choices here, but for now will force an encounter
 		System.out.println("Press enter to continue.....");
 		mvScrn();
-		smackStuff();
+		scanner.nextLine();
+		goblinEncounter();
 	}
 
 //exit method for incorrect user selections at prompts. Later will set up choices to loop back if incorrect option entered
@@ -107,16 +108,20 @@ public class ConsoleGame {
 	}
 
 //Method to run fights
-	private static void smackStuff() {
+	private static void goblinEncounter() {
 		Scanner scanner = new Scanner(System.in);
-		System.out.println("A nasty-smelling green creature carrying a club runs towards you.");
+		System.out.println("You see a nasty-smelling green creature carrying a club. He sees you as well and runs towards you.");
 		System.out.println("Seems it is time to fight...");
 		System.out.println("Press enter to continue.....");
 		mvScrn();
 		scanner.nextLine();
-		System.out.println("The creature reaches you and you swing the mighty Farenthal...");
-
+		System.out.println("As the creature draws near, you swing the mighty Farenthal...");
 	}
+
+//need to figure out how the static/not static thing works
+//	private fight() {
+//		System.out.println(player.getHp());
+//	}
 
 
 
