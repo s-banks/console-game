@@ -9,7 +9,7 @@ public class ConsoleGame {
 //Have user set their name
 		System.out.println("What is your name, hero?");
 		String playerName = String.valueOf(scanner.nextLine());
-//Create player character with pre-made stats (name, maxhp, hp (current), strength, constitution, & dexterity)
+//Create player character with pre-made stats (name, maxHp, hp (current), strength, constitution, & dexterity)
 //Can be refactored to allow for roll based stats at a later time
 		PlayerChar player = new PlayerChar(playerName, 9, 9, 16, 17, 18);
 //Will likely not use most monsters and items early on. Created for future inclusion
@@ -35,11 +35,11 @@ public class ConsoleGame {
 		Items healthPot = new Items("Health Potion", 4, 0, 0, 0);
 		Items QualHealthPot = new Items("Quality Health Potion", 6, 0, 0, 0);
 		//Strength pot
-		Items WeakStrPot = new Items("Weak Health Potion", 0, 1, 0, 0);
+		Items WeakStrPot = new Items("Weak Strength Potion", 0, 1, 0, 0);
 		//Constitution pot
-		Items WeakConPot = new Items("Weak Health Potion", 0, 0, 1, 0);
+		Items WeakConPot = new Items("Weak Constitution Potion", 0, 0, 1, 0);
 		//Dexterity pot
-		Items WeakDexPot = new Items("Weak Health Potion", 0, 0, 0, 1);
+		Items WeakDexPot = new Items("Weak Dexterity Potion", 0, 0, 0, 1);
 //Game intro text
 		System.out.println("Welcome to the World of Sutal, " + player.getName() + "!");
 		System.out.println("We have summoned you from your world to defeat the Demon Lord Varthos.");
@@ -68,7 +68,7 @@ public class ConsoleGame {
 //MonsterChar.monsterDmgGen();
 
 
-	} //end of main brace
+	} //end of main method brace
 
 
 
